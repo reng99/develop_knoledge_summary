@@ -12,7 +12,9 @@
 
 ### 学习目录
 
-1.[get_start](./get_start.md)
+1.[template_guide_get_start](./template_guide_get_start.md)
+
+2.[template_guide_the_template](./template_guide_the_template.md)
 
 
 ### 参考链接
