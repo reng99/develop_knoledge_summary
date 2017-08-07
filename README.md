@@ -4,7 +4,7 @@
 
 如有什么不妥的地方希望谅解和补充
 
-- [前端](./foreground/)
+- [前端](./front_end/)
 
 - [后台](./backstage/)
 
