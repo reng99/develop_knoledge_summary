@@ -9,3 +9,5 @@
 - [清除select的默认样式](./clear_select_default_style.md) 2017-08-21
 
 - [引入外部的字体](./extend_font.md) 2017-08-22
+
+- [HTML5新增了哪些内容或API](./html5_new_content_or_api.md)  2017-08-25
