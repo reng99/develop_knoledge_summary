@@ -11,3 +11,5 @@
 - [引入外部的字体](./extend_font.md) 2017-08-22
 
 - [HTML5新增了哪些内容或API](./html5_new_content_or_api.md)  2017-08-25
+
+- [怎么理解html语义化](./semantic_meaning.md) 2017-08-26
