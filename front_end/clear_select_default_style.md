@@ -7,3 +7,5 @@
   -webkit-appearance:none;
 
 ```
+
+这个清楚的样式对ie无效，即使加上`-ms-appearance:none;`
