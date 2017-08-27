@@ -15,3 +15,5 @@
 - [怎么理解html语义化](./semantic_meaning.md) 2017-08-26
 
 - [html5 的 <!DOCTYPE>](./html5_doctype.md) 2017-08-27
+
+- [<input>和<textarea>区别]（./input_textarea.md） 2017-08-27
