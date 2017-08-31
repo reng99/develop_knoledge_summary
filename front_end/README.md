@@ -19,3 +19,5 @@
 - [input和textarea区别](./input_textarea.md) 2017-08-27
 
 - [前端安全](./frontend_security.md) 2017-08-29
+
+- [清除浮动方法](./clear_float_methods.md) 2017-08-31
