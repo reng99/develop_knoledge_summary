@@ -2,4 +2,4 @@
 
 在`package.json`中将本电脑相关的ip地址添加上去。如图所示：
 
-<img src="./imgs/webpack/webpack_public.png">
+![webpack_public](./webpack_public.png)
