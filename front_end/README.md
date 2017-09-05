@@ -21,3 +21,5 @@
 - [前端安全](./frontend_security.md) 2017-08-29
 
 - [清除浮动方法](./clear_float_methods.md) 2017-08-31
+
+- [移除input元素默认的高亮](./input_outline.md) 2017-09-05
