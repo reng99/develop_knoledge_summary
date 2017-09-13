@@ -19,5 +19,7 @@
 |307|Temporary Redirect 和 302（Found）相同。许多浏览器会错误地响应302应答进行重定向，即使原来的请求是POST，即使它实际上只能在POST请求的应答是303时才能重定向。|
 |400|Bad Request 请求出现语法错误。|
 |401|Unauthorized 客户试图未经授权访问受密码保护的页面。应答中包含一个WWW-Authenticate头，浏览器据此显示用户名／密码对话框，然后在填写合适的Authoization头再次发出请求|
-|403|Forbidden|
+|403|SC_Forbidden 的意思是除非拥有授权否则服务器拒绝提供所请求的资源。这个状态经常会由于服务器上的损坏文件或目录许可而引起。|
+|404|SC_Not_Found 告诉客户端所给的地址无法找到任何资源。它是表示“没有所访问的页面”的标准方式。这个状态码是常用的响应并且在`HttpServletResponse`类中有专门的方法来实现它：`sendError("message")`。相对于setStatus使用sendError的好处是：服务器会自动生成一个错误页面来显示错误信息。但是，Internet Explorer 5浏览器（忽略ie5等介绍）|
+|
 
