@@ -21,5 +21,7 @@
 |401|Unauthorized 客户试图未经授权访问受密码保护的页面。应答中包含一个WWW-Authenticate头，浏览器据此显示用户名／密码对话框，然后在填写合适的Authoization头再次发出请求|
 |403|SC_Forbidden 的意思是除非拥有授权否则服务器拒绝提供所请求的资源。这个状态经常会由于服务器上的损坏文件或目录许可而引起。|
 |404|SC_Not_Found 告诉客户端所给的地址无法找到任何资源。它是表示“没有所访问的页面”的标准方式。这个状态码是常用的响应并且在`HttpServletResponse`类中有专门的方法来实现它：`sendError("message")`。相对于setStatus使用sendError的好处是：服务器会自动生成一个错误页面来显示错误信息。但是，Internet Explorer 5浏览器（忽略ie5等介绍）|
-|
+|405|Method Not Allow 请求方法（GET、POST、HEAD、DELETE、PUT、TRACE等）对指定的资源不适用。|
+|406|Not Acceptable 指定的资源已经找到，但它的MIME类型和客户在Accpet头中所指定的不兼容。|
+|407|Proxy Authentication Required 类似于401，表示客户必须先经过代理服务器的授权。|
 
