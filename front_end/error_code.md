@@ -24,4 +24,8 @@
 |405|Method Not Allow 请求方法（GET、POST、HEAD、DELETE、PUT、TRACE等）对指定的资源不适用。|
 |406|Not Acceptable 指定的资源已经找到，但它的MIME类型和客户在Accpet头中所指定的不兼容。|
 |407|Proxy Authentication Required 类似于401，表示客户必须先经过代理服务器的授权。|
+|408|Request Timeout 在服务器许可的等待时间内，客户一直没有发出任何请求。客户可以在以后重复同一请求。|
+|409|Confict 通常和PUT请求有关。由于请求和资源的当前状态相冲突，因此请求不能成功。|
+|410|Gone 所请求的文档已经不再可用，而且服务器不知道应该重定向到哪个地址。它和404的不同在于，返回407表示文档永远地离开了指定的位置，而404表示由于未知的原因文档不可用|
+|411|Length Rquired 服务器不能处理请求，除非客户发送一个Content-Length头。|
 
