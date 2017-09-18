@@ -30,6 +30,14 @@
 |411|Length Rquired 服务器不能处理请求，除非客户发送一个Content-Length头。|
 |412|Precondition Failed 请求头中指定的一些前提条件失败|
 |413|Request Entity Too Large 目标文档的大小超过服务器当前愿意处理的大小。如果服务器认为自己能够稍后再处理该请求，则应该提供一个Retry-After头|
+|414|Request URI Too Long URI太长|
+|416|Requested Range Not Satisfiable 服务器不能满足客户在请求中指定的Range头。|
+|500|Internal Server Error 服务器遇到了意料不到的情况，不能完成客户的请求。|
+|501|Not Implemented 服务器不支持实现请求所需要的功能。丽日，客户发出了一个服务器不支持的PUT请求。|
+|502|Bad Gateway 服务器作为网关或者代理时，为了完成请求访问下一个服务器，但该服务器返回了非法的应答。|
+|503|Service Unavailable 服务器由于维护或者负载过重未能应答。例如，Servlet可能在数据库链接池已满的情况下返回503。服务器返回503时可以提供一个Retry-After头。|
+|504|Gateway Timeout 由作为代理或网关的服务器使用，表示不能及时地从远程服务器获得应答。|
+|505|HTTP Version Not Supported 服务器不支持请求中所指明的HTTP版本。|
 
 
 
