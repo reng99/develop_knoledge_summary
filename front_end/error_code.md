@@ -42,3 +42,12 @@
 
 
 ### 参考文章
+
+- [HTTP状态代码（各种错误代码集合）](http://blog.csdn.net/guoyuqi0554/article/details/17678459)
+
+- [HTTP状态查询-站长工具](http://tool.chinaz.com/pagestatus/)
+
+
+### 说明
+
+本文章结合上面的两篇文章进行整合，如有涉及到侵权的地方，请与本人联系，本人会在第一时间进行更改或者删除。邮箱 1837895991@qq.com,望见谅
