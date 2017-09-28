@@ -27,3 +27,5 @@
 - [前端错误码(error_code)的解析](./error_code.md) 2017-09-11
 
 - [美化浏览器的滚动条](./beautify_scroll_bar.md) 2017-09-13
+
+- [input自动选择的背景色问题](./input_select_bgIssue.md) 2017-09-28
