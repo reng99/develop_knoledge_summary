@@ -30,4 +30,4 @@
 
 - [input自动选择的背景色问题](./input_select_bgIssue.md) 2017-09-28
 
-- [清除IE10+下input的叉叉（X）和密码输入框的眼睛图标](./input_style_clear.md) 2017-09-28
+- [清除IE10+下input的叉叉（X）和密码输入框的眼睛图标和锁定大写](./input_style_clear.md) 2017-09-28
