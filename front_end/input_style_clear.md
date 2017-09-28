@@ -1,4 +1,6 @@
-## 清除IE10+下input的叉叉（X）和密码输入框的眼睛图标
+## 清除IE10+下input的叉叉（X）和密码输入框的眼睛图标和锁定大写
+
+**清除IE10+下input的叉叉（X）和密码输入框的眼睛图标**
 
 从IE 10开始，type=”text” 的 input 在用户输入内容后，会自动产生一个小叉叉（X），方便用户点击清除已经输入的文本.
 
@@ -29,9 +31,21 @@ input::-ms-clear,input::-ms-reveal{
 
 `input::-ms-reveal`是清除密码的眼睛icon
 
+**清除IE10+下input的锁定大写**
+
+```javascript
+
+	document.msCapsLockWarningOff = true;
+
+```
+
+
+
 这里就不给出截图了，可以自行建一个demo尝试下哦。
 
 
 ### 参考链接
 
 [清除IE10下input的叉叉（X）和密码输入框的眼睛图标](http://blog.csdn.net/web_qdkf/article/details/50039899)
+
+[msCapsLockWarningOff property文档](https://msdn.microsoft.com/library/jj128374(v=vs.85).aspx)
