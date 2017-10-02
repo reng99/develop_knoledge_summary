@@ -33,3 +33,5 @@
 - [清除IE10+下input的叉叉（X）和密码输入框的眼睛图标和锁定大写](./input_style_clear.md) 2017-09-28
 
 - [浏览器进入无痕模式](./traceless_mode.md) 2017-09-30
+
+- [清除textarea的默认样式](./clear_textarea.md) 2017-10-01
