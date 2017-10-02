@@ -34,4 +34,4 @@
 
 - [浏览器进入无痕模式](./traceless_mode.md) 2017-09-30
 
-- [清除textarea的默认样式](./clear_textarea.md) 2017-10-01
+- [清除textarea的默认样式](./clear_textarea.md) 2017-10-02
