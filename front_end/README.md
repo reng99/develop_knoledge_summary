@@ -35,3 +35,5 @@
 - [浏览器进入无痕模式](./traceless_mode.md) 2017-09-30
 
 - [清除textarea的默认样式](./clear_textarea.md) 2017-10-02
+
+- [input自定义属性](./input_custom_attr.md) 2017-10-10
