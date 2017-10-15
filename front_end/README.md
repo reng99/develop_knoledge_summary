@@ -37,3 +37,5 @@
 - [清除textarea的默认样式](./clear_textarea.md) 2017-10-02
 
 - [input自定义属性](./input_custom_attr.md) 2017-10-10
+
+- [图片的水平和垂直居中](./imgs_center.md) 2017-10-15
