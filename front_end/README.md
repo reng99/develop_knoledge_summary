@@ -39,3 +39,5 @@
 - [input自定义属性](./input_custom_attr.md) 2017-10-10
 
 - [图片的水平和垂直居中](./imgs_center.md) 2017-10-15
+
+- [移动端开发要点汇总](./mobile_phone_develope.md) 2017-11-01
