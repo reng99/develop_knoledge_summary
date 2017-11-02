@@ -32,3 +32,7 @@
 5.minimum-scale - 允许用户的最小的缩放比例
 
 6.user-scalable - 用户是否可以手动缩放[yes|no]
+
+**相关参考**
+
+- [meta viewport 你真的了解吗？](http://yunkus.com/meta-viewport-usage/)
