@@ -85,6 +85,8 @@ favicon.ico 一般用于作为缩略的网站的标志，显示在浏览器的�
 
 - 如果图标大小合格，请检查图标文件是否放在网站根目录，或者是否在header加上了META声明；
 
+- favicon建议存放在网站的根目录。[可参考维基百科](https://en.wikipedia.org/wiki/Favicon)
+
 ### 参考文章
 
 - [关于网站图标favicon.ico那点事儿，你造吗？ | 张戈博客](https://zhangge.net/4344.html) 
