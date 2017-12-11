@@ -47,3 +47,24 @@ MDN号码的结构是：CC + MAC + H0 H1 H2 H3 + ABCD,其中
 ```
 
 > 实现的验证如下
+
+```bash
+  /**
+  * 检查字符串是否为合法手机号码
+  * @param {String} 字符串
+  * @return {bool} 是否为合法手机号码
+  */
+```
+
+实现的代码
+
+```javascript
+  function isPhone (phoneNum) {
+    var validate = RegExp(/^(0|86)?1[0-9]{10}$/).test(phoneNum); // 网上有这样的 RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|18[0-9]|14[57])[0-9]{8}$/).test(aPhone)
+    if(validate){
+      return true;
+    }else{
+      return false;
+    }
+  }
+```
