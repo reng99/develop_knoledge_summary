@@ -5,3 +5,5 @@
 [js正则验证手机号码格式](./verify_phone_num.md) 2017.12.11
 
 [js正则验证qq号码格式](./verify_qq_format.md) 2017.12.12
+
+[js正则验证密码的复杂程度](./verify_complex_password.md)
