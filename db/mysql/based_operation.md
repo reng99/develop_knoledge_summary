@@ -116,10 +116,45 @@ UPDATE table_name SET field=new-value1 , field=new-value2
 ```
 说明 ：
 
+你可以同时更新一个或者多个字段。
 
+你可以在WHERE子句中指定任何条件。
 
+你可以在一个单独表中同时更新数据。
 
+> DELETE 语句
 
+语法 ：
 
+DELETE语句从MySQL数据表中删除数据的通用方法。
 
+```bash
+DELETE FROM table_name 
+[WHERE Clause]
+```
 
+说明 ：
+
+如果没有指定WHERE子句，MySQL表中所有记录将被删除。
+
+你可以在WHERE子句中指定任何条件。
+
+你可以在单个表中一次性删除记录。
+
+> LIKE子句  -- 模糊查询
+
+语法 ：
+
+以下是SQL SELECT语句使用LIKE子句从数据表中读取数据的通用语法:
+
+```bash
+SELECT field1 , field2 , ... fieldN
+FROM table_name
+WHERE field1 LIKE condition1 [AND [OR]] field2 = 'somevalue'
+```
+
+说明 ：
+
+你可以在WHERE子句中指定任何条件。
+
+你可以在WHERE子句中使用LIKE子句。
