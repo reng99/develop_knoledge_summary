@@ -87,6 +87,19 @@ SELECT命令可以读取一条或者多条记录。
 
 你可以通过OFFSET指定SELECT语句开始查询的数据偏移量。默认情况下偏移量为0。
 
+> WHERE 子句
+
+语法 ：
+
+```bash
+SELECT field1 , field2 , ... fieldN FROM table_name1  , table_name2 ...
+[WHERE condition1 [AND [OR]] condition2 ...
+```
+
+说明 : 
+
+查询语句中你可以使用一个或者多个表，表之间使用逗号`,`分割，并使用WHERE语句来设定查询条件。
+
 
 
 
