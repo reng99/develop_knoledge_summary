@@ -100,9 +100,21 @@ SELECT field1 , field2 , ... fieldN FROM table_name1  , table_name2 ...
 
 查询语句中你可以使用一个或者多个表，表之间使用逗号`,`分割，并使用WHERE语句来设定查询条件。
 
+你可以在WHERE子句中指定任何合理的条件。
 
+你可以使用AND或OR指定一个或者多个条件。
 
+WHERE子句也可以运用于SQL的DELETE或者UPDATE命令。
 
+WHERE子句类型于程序语言中的if条件，根据MySQL表中的字段来读取指定的数据。
+
+> UPDATE 查询
+
+```bash
+UPDATE table_name SET field=new-value1 , field=new-value2
+[WHERE Clause]
+```
+说明 ：
 
 
 
