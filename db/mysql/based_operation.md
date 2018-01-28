@@ -158,3 +158,15 @@ WHERE field1 LIKE condition1 [AND [OR]] field2 = 'somevalue'
 你可以在WHERE子句中指定任何条件。
 
 你可以在WHERE子句中使用LIKE子句。
+
+你可以使用LIKE子句代替等号`=`。
+
+LIKE通常与`%`一同使用，类似于一个元字符的搜索。
+
+你可以使用AND或者OR指定一个或者多个条件。
+
+你可以在DELETE或UPDATE命令中使用WHERE...LIKE子句来指定条件。
+
+> UNION 
+
+有待补充...
