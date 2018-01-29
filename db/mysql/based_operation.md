@@ -202,6 +202,11 @@ ALL ： 可选，返回所有结果集，包含重复数据。
 有待补充 ...
 
 
+### other
+
+> 获取表中字段名
+
+`SHOW CREATE TABLE table_name`
 
 
 
