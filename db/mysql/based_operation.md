@@ -199,7 +199,24 @@ ALL ： 可选，返回所有结果集，包含重复数据。
 
 > 排序
 
-有待补充 ...
+语法 ：
+
+使用sql select语句的ORDER BY子句将查询数据排序后再返回数据：
+
+```bash
+SELECT field1 ,field , ... fieldN table_name1 , table_name2 ...
+ORDER BY field1 , [field2 ...] [ASC [DESC]]
+```
+
+说明 ：
+
+你可以使用任何字段来作为排序的条件，从而返回排序后的查询结果。
+
+你可以设定多个字段来排序。
+
+你可以使用ASC 或DESC关键字来设置查询结果是按照升序或降序排列。默认情况下，它是按照升序排列的。
+
+你可以添加WHERE...LIKE子句来设置条件
 
 
 ### other
