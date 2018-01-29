@@ -167,6 +167,41 @@ LIKE通常与`%`一同使用，类似于一个元字符的搜索。
 
 你可以在DELETE或UPDATE命令中使用WHERE...LIKE子句来指定条件。
 
-> UNION 
+> UNION
 
-有待补充...
+描述 ：
+
+UNION操作符用于连接连个以上的SELECT语句的结果组合到一个结果集合中。多个SELECT语句会删除重复的数据。
+
+语法 ：
+
+```bash
+SELECT expression1 , expression2 , ... expression_n
+FROM tables
+[WHERE conditions]
+UNION [ALL | DISTINCT]
+SELECT expression1 , expression2 , ... expression_n
+FROM tables
+[WHERE condition];
+```
+
+说明 ：
+
+expression1 , expression2 , ... expression_n : 要检索的列
+
+tables: 要检索的数据表
+
+WHERE conditions : 可选，检索的条件
+
+DISTINCT : 可选，删除结果集中重复的数据。默认情况下UNION操作符已经删除了重复数据，所以DISTINCT修饰符对结果没有什么影响。
+
+ALL ： 可选，返回所有结果集，包含重复数据。
+
+> 排序
+
+有待补充 ...
+
+
+
+
+
