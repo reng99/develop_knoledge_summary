@@ -218,6 +218,18 @@ ORDER BY field1 , [field2 ...] [ASC [DESC]]
 
 你可以添加WHERE...LIKE子句来设置条件
 
+> 分组
+
+GROUP BY语句根据一个或者多个列对结果集进行分组。在分组的列上我们可以使用COUNT,SUM,ACG 等函数。
+
+语法 ：
+
+```bash
+SELECT column_name , function(column_name)
+FROM table_name
+WHERE column_name operator value
+GROUP BY column_name
+```
 
 ### other
 
