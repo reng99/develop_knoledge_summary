@@ -237,5 +237,9 @@ GROUP BY column_name
 
 `SHOW CREATE TABLE table_name`
 
+> 在表中添加字段
+
+`ALTER TABLE table_name ADD column_name VARCHAR(20)`
+
 
 
