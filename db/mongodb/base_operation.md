@@ -62,5 +62,15 @@ true
 > show tables;
 
 ```
- 
- 
+
+> 插入文档
+
+`db.collection_name.insert(document)`
+
+demo:
+
+```bash
+db.collection_name({
+ title: "this is the title"
+})；
+```
