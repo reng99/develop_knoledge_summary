@@ -117,4 +117,14 @@ db.collection_name.remove(
 )
 ```
 
-参
+参数说明：
+
+query: 可选，删除的文档条件。
+
+justOne: 可选，如果设置为true或1，则只删除一个文档。
+
+writeConcern: 可选，抛出异常的级别。
+
+> 查询文档
+
+。。。
