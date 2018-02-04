@@ -74,3 +74,25 @@ db.collection_name({
  title: "this is the title"
 })；
 ```
+
+> 更新文档
+
+使用`update()`方法更新已经存在的文档。语法格式如下：
+
+```bash
+db.collection_name.update(
+ <query>,
+ <update>,
+ {
+   upsert: <boolean>,
+   multi: <boolean>,
+   writeConcern: <document>
+ }
+)
+```
+
+参数说明 ：
+
+query: update的查询条件，类似sql update查询内where后面的条件。
+
+update: update的对象和
