@@ -183,6 +183,62 @@ projection : 可选，使用投影操作符指定返回的键。查询时返回�
 
 > 聚合
 
-。。。
+mongodb中的聚合（aggregate）主要是用于处理数据（诸如统计平均值，求和等），并返回计算后的数据结果。有点类似mysql中的count(*)。
+
+aggregate的语法：
+
+```bash
+> db.collection_name.aggregate(AGGREGATE_OPERATION)
+```
+
+这个难清楚，还是来个demo比较好：
+
+```bash
+{
+   _id: ObjectId(7df78ad8902c)
+   title: 'MongoDB Overview', 
+   description: 'MongoDB is no sql database',
+   by_user: 'runoob.com',
+   url: 'http://www.runoob.com',
+   tags: ['mongodb', 'database', 'NoSQL'],
+   likes: 100
+},
+{
+   _id: ObjectId(7df78ad8902d)
+   title: 'NoSQL Overview', 
+   description: 'No sql database is very fast',
+   by_user: 'runoob.com',
+   url: 'http://www.runoob.com',
+   tags: ['mongodb', 'database', 'NoSQL'],
+   likes: 10
+},
+{
+   _id: ObjectId(7df78ad8902e)
+   title: 'Neo4j Overview', 
+   description: 'Neo4j is no sql database',
+   by_user: 'Neo4j',
+   url: 'http://www.neo4j.com',
+   tags: ['neo4j', 'database', 'NoSQL'],
+   likes: 750
+},
+```
+```bash
+> db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$sum : 1}}}])
+{
+   "result" : [
+      {
+         "_id" : "runoob.com",
+         "num_tutorial" : 2
+      },
+      {
+         "_id" : "Neo4j",
+         "num_tutorial" : 1
+      }
+   ],
+   "ok" : 1
+}
+>
+```
+
 
 
