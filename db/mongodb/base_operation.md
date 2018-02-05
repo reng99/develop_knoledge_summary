@@ -127,4 +127,24 @@ writeConcern: 可选，抛出异常的级别。
 
 > 查询文档
 
+通过`find()`方法以非结构化的方式来显示所有文档。
+
+语发 ：
+
+`db_collection_name.find(query,projection)`
+
+参数说明：
+
+query : 可选，使用查询操作符指定查询条件。
+
+projection : 可选，使用投影操作符指定返回的键。查询时返回文档中所有键值，只需要省略该参数就可以了（默认省略）。
+
+如果你需要以易读的方式读取数据，可以使用`pretty()`方法，语法格式如下：
+
+```bash
+> db.collection_name.find().pretty()
+```
+
+> 条件操作符
+
 。。。
