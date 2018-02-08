@@ -369,6 +369,46 @@ $db： 数据库名称（可选参数）
 
 demo如下所示：
 
-。。。
+实例中用户数据是使用了dbref，字段address:
+
+```bash
+{
+   "_id":ObjectId("53402597d852426020000002"),
+   "address": {
+   "$ref": "address_home",
+   "$id": ObjectId("534009e4d852427820000002"),
+   "$db": "runoob"},
+   "contact": "987654321",
+   "dob": "01-01-1991",
+   "name": "Tom Benzamin"
+}
+```
+
+address DBRef 字段指定了引用的地址文档是在 address_home 集合下的 runoob 数据库，id 为 534009e4d852427820000002。
+
+以下代码中，通过指定$ref参数（address_home集合）来查找集合中指定的id的用户地址信息：
+
+```bash
+> var user = db.users.findOne({"name":"Tom Benzamin"})
+> var dbRef = user.address
+> db[dbRef.$ref].findOne({"_id":(dbRef.$id)})
+```
+
+ 然后就返回了address_home集合中的地址数据：
+ 
+ ```bash
+ {
+   "_id" : ObjectId("534009e4d852427820000002"),
+   "building" : "22 A, Indiana Apt",
+   "pincode" : 123456,
+   "city" : "Los Angeles",
+   "state" : "California"
+}
+ ```
+
+> 注意
+
+注意⚠️  本文件的学习点参考自http://www.runoob.com/mongodb/mongodb-tutorial.html
+
 
 
