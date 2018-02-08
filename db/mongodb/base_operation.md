@@ -405,8 +405,18 @@ address DBRef 字段指定了引用的地址文档是在 address_home 集合下�
    "state" : "California"
 }
  ```
+ 
+> 原子操作
 
-> 注意
+mongodb不支持事务，所以，在项目中应用时，要注意这点。无论什么设计，都不要要求mongodb保证数据的完整性。但是mongodb提供了许多原子操作，比如文档的保存，修改和删除等，都是原子操作。
+
+所谓原子操作就是要么保存这个文档到mongodb，要么没有保存到mongodb，不会出现查询到的文档没有保存完整的情况。
+
+**原子操作数据模型**
+
+...
+
+## 注意
 
 注意⚠️  本文件的学习点参考自http://www.runoob.com/mongodb/mongodb-tutorial.html
 
