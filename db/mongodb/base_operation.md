@@ -483,7 +483,25 @@ $bit -> 位操作，integer类型。 `{ $bit : { field : {and : 5} } }`
 
 > 高级索引
 
-。。。有待补充
+考虑以下文档集合（users）：
+
+```bash
+{
+   "address": {
+      "city": "Los Angeles",
+      "state": "California",
+      "pincode": "123"
+   },
+   "tags": [
+      "music",
+      "cricket",
+      "blogs"
+   ],
+   "name": "Tom Benzamin"
+}
+```
+
+以上的文档包含了address子文档和tags数组。
 
 ## 注意
 
