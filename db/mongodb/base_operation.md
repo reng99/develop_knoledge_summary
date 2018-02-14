@@ -615,6 +615,36 @@ mongodb中存储的文档必须由一个*_id键。这个键的值可以是任何
 
 mongodb采用了ObjectId，而不是其他比较常规的做法（比如自动增加的主键）的主要原因，因为在多个服务器上同步自动增加主键值既费力还费时。
 
+**创建新的ObjectId**
+
+使用以下的代码生成新的objectid:
+
+```bash
+> newObjectId = ObjectId()
+```
+上面的语句会返回唯一生成的id,你也可以使用生成的id来取代mongodb自动生成的objectid:
+
+```bash
+> myObjectId = ObjectId("your id number here")
+```
+
+**创建文档的时间戳**
+
+由于objectid中存储了四个字节的时间戳，所以你不需要为你的文档保存时间戳字段，你可以通过getTimestamp函数来获取文档的创建时间。
+
+```bash
+> ObjectId("5349b4ddd2781d08c09890f4").getTimestamp()
+```
+
+上面的代码将返回iso格式的文档创建时间：
+
+```bash
+ISODate("2014-04-12T21:49:17Z")
+```
+
+**ObjectId转换为字符串**
+
+在某些情况下，你可能需要将objectid转换为字符串格式。你可以使用`> new ObjectId().str`
 
 ## 注意
 
