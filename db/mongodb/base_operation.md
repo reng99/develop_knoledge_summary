@@ -687,9 +687,43 @@ map函数必须调用emit(key,value)返回键值对。
 
 - limit : 发往map函数的文档数量的上限（要是没有limit,单独使用sort的用处不大）
 
-> 全文检索
+> 正则表达式
 
-...
+正则表达式是使用单个字符串描述，匹配一系列符合某个句法规定的字符串。
+
+许多程序设计语言都支持利用正则表达式进行字符串操作。
+
+mongodb使用$regex操作符来设置匹配字符串的正则表达式。
+
+mongodb使用pcre(perl compatible regular expression)作为正则表达式语言。
+
+我们使用正则表达式不需要做任何的配置。
+
+考虑以下post集合的文档结构，该文档包含了文章内容和标签：
+
+```bash
+{
+   "post_text": "enjoy the mongodb articles on runoob",
+   "tags": [
+      "mongodb",
+      "runoob"
+   ]
+}
+```
+
+**使用正则表达式**
+
+以下命令使用正则表达式查找包含runoob字符串的文章：
+
+```bash
+> db.posts.find({post_text:{$regex:"runoob"}})
+# 或者可以写成
+> db.post.find({post_text:/runoob/})
+```
+
+**不区分大小写的正则表达式**
+
+如果检索需要不区分大小写，我们可以设置$options为$i。
 
 ## 注意
 
