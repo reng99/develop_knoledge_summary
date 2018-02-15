@@ -646,6 +646,23 @@ ISODate("2014-04-12T21:49:17Z")
 
 在某些情况下，你可能需要将objectid转换为字符串格式。你可以使用`> new ObjectId().str`
 
+> map reduce
+
+map reduce是一种计算模型，简单的说就是将大批量的工作（数据）分解（map）执行，然后再将结果合并成最终结果（reduce）。
+
+mongodb提供的map-reduce非常灵活，对于大规模数据分析也相当实用。
+
+**mapreduce命令**
+
+以下是mapreduce的基本用法：
+
+```bash
+> db.collection.mapReduce(
+ function() {emit(key,value);}, // map函数
+ function(key,value) {}
+)
+```
+
 ## 注意
 
 注意⚠️  本文件的学习点参考自http://www.runoob.com/mongodb/mongodb-tutorial.html
