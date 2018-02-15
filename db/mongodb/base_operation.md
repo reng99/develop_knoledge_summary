@@ -659,9 +659,37 @@ mongodb提供的map-reduce非常灵活，对于大规模数据分析也相当实
 ```bash
 > db.collection.mapReduce(
  function() {emit(key,value);}, // map函数
- function(key,value) {}
+ function(key,value) {return reduceFunction}, // reduce函数
+ {
+  out: collection,
+  query: document,
+  sort: document,
+  limit: number
+ }
 )
 ```
+
+使用mapreduce要实现两个函数map函数和reduce函数，map函数调用emit(key,value)，遍历collection中所有的记录，将key与value传递给reduce函数进行处理。
+
+map函数必须调用emit(key,value)返回键值对。
+
+参数说明：
+
+- map ： 映射函数（生成键值对序列，作为reduce函数参数）
+
+- reduce : 统计函数，reduce函数的任务就是将key-value，也就是把values数组变成一个单一的值value
+
+- out : 统计结果存放集合（不指定则使用临时集合，在客户端断开后自动删除）。
+
+- query : 一个筛选条件，只有满足条件的文档才能调用map函数。（query,limit,sort可以随意组合）
+
+- sort : 和limit结合的sort排序参数。
+
+- limit : 发往map函数的文档数量的上限（要是没有limit,单独使用sort的用处不大）
+
+> 全文检索
+
+...
 
 ## 注意
 
