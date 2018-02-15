@@ -725,6 +725,12 @@ mongodb使用pcre(perl compatible regular expression)作为正则表达式语言
 
 如果检索需要不区分大小写，我们可以设置$options为$i。
 
+以下命令将查找不需要区分大小写的字符串runoob:
+
+```bash
+> db.posts.find({post_text:{$regex:"runoob",$options:"$i"}})  # 集合中将返回所有包含字符串runoob的数据，且不区分大小写
+```
+
 ## 注意
 
 注意⚠️  本文件的学习点参考自http://www.runoob.com/mongodb/mongodb-tutorial.html
