@@ -731,6 +731,10 @@ mongodb使用pcre(perl compatible regular expression)作为正则表达式语言
 > db.posts.find({post_text:{$regex:"runoob",$options:"$i"}})  # 集合中将返回所有包含字符串runoob的数据，且不区分大小写
 ```
 
+**数组元素使用正则表达式**
+
+有待补充。。。
+
 ## 注意
 
 注意⚠️  本文件的学习点参考自http://www.runoob.com/mongodb/mongodb-tutorial.html
