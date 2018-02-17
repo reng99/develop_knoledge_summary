@@ -786,8 +786,35 @@ mongodb 没有像sql一样自动增长的功能，mongodb的_id是系统自动�
 现在，我们创建函数getNextSequenceValue来作为序列名的输入，指定的序列会自动增长1并返回最新序列值。实例中使用的序列名为productid.
 
 ```bash
-> function 
+> function getNextSequenceValue(sequenceName){
+ var sequenceDocument = db.counters.findAndModify(
+  {
+    query: {_id: sequenceName},
+    update: {$inc:{sequence_value}},
+    new: true
+  }
+ );
+ return sequenceDocument.sequenceDocument.sequence_value;
+}
 ```
+
+**使用javascript函数**
+
+接下来我们将使用getNextSequenceValue函数创建一个新的文档，并设置文档_id自动为返回的序列值：
+
+```bash
+> db.products.insert({
+ "_id": getNextSequenceValue("productid),
+ "product_name": "Samsung S3",
+ "category": "mobile"
+})
+```
+
+读取文档验证函数是否有效：`db.products.find()`
+
+
+
+
 
 
 ## 注意
