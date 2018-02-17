@@ -755,7 +755,33 @@ title: eval("/" + title + "/i") // 等同于 title:{$regex: title,$Option:"$i"}
 
 > 自动增长
 
-。。。
+mongodb 没有像sql一样自动增长的功能，mongodb的_id是系统自动生成的12字节唯一标识。
+
+但在某种情况下，我们可能需要实现objectid自动增长功能。
+
+由于mongodb没有实现这个功能，我们可以通过编程的方式来实现，以下我们将coiunters集合实现_id字段自动增加。
+
+**使用counters集合**
+
+考虑以下products文档。我们希望_id字段实现从1，2，3，4到n的自动增长功能。
+
+```bash
+{
+ "_id": 1,
+ "product_name": "Apple iPhone",
+ "category": "mobiles"
+}
+```
+
+为此，创建counters集合，序列字段值可以实现自动增长：`> db.createCollection("counters")`
+
+向counters集合中插入下面的序列，使用productid作为key,sequence_value字段是序列通过自动增长后的一个值。
+
+```bash
+> db.counters.insert({_id: "productid},sequence_value:0)
+```
+
+
 
 ## 注意
 
