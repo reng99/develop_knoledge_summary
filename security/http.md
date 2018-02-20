@@ -37,6 +37,40 @@ http默认端口号为80，但是你也可以改为8080或者其他端口号。
 |8|TRACE|回显服务器收到的请求，主要用于测试或诊断。|
 
 
+### http响应头信息
+
+http请求头提供了关于请求，响应或者其他的发送实体的信息。
+
+下面是关于响应头信息：
+
+|应答头|说明|
+|----|-----|
+|Allow|服务器支持哪些请求方法（如get,post等）|
+|Content-Encoding|文档的编码（encode）方法。只有在解码之后才可以得到content-type头指定的内容类型。利用gzip压缩文档能够显著地减少html文档的下载时间。java的GZIPOutputStream可以很方便地进行gzip压缩，但只有unix上的Netscape和Windows上的IE4,IE5才支持它。因此，Servlet应该通过查看Accept-Encoding头（即request.getHeader("Accept-Encoding")）检查浏览器是否支持gzip，为支持gzip的浏览器返回经gzip压缩的html页面，为其他浏览器返回普通页面。|
+|Content-Length|表示内容长度。只有当浏览器使用持久http连接时才需要这个数据。如果你想利用持久连接的优势，可以把输出文档写入ByteArrayOutputStream, 完成后查看大小，然后把值放入Content-Length头，最后通过byteArrayStream.writeTo(response.getOutputStream())发送内容|
+|Date|当前的GMT时间。你可以使用setDateHeader来设置这个头以避免转换时间格式的麻烦。|
+|Expires|应该在证明时候认为文档已经过期，从而不再缓存它|
+|Last-Modified|文档的最后改动时间。客户可以通过If-Modified-Since请求头提供一个日期，该请求头将被视为一个条件GET，只有改动时间迟于指定时间的文档才会返回，否则返回一个304（Not Modified）状态。Last-Modified也可以用setDateHeader方法来设置。|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
