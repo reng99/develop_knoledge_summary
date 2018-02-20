@@ -51,6 +51,10 @@ http请求头提供了关于请求，响应或者其他的发送实体的信息�
 |Date|当前的GMT时间。你可以使用setDateHeader来设置这个头以避免转换时间格式的麻烦。|
 |Expires|应该在证明时候认为文档已经过期，从而不再缓存它|
 |Last-Modified|文档的最后改动时间。客户可以通过If-Modified-Since请求头提供一个日期，该请求头将被视为一个条件GET，只有改动时间迟于指定时间的文档才会返回，否则返回一个304（Not Modified）状态。Last-Modified也可以用setDateHeader方法来设置。|
+|Location|表示客户应当到哪里提取文档。Location通常不是直接设置的，而是通过HttpServletResponse的sendRedirect方法，该方法同时设置状态妈为302|
+|Refresh|表示浏览器应该在多少时间之后刷新文档，以秒计。除了刷新当前文档之外，你还可以通过setHeader("Refresh","5;URL=http://host/path")让浏览器读取指定的页面。注意这种功能通常是通过设置html页面head区的<META HTTP-EQUIV="Refresh" CONTENT="5;URL=http://host/path">实现，这是因为，自动刷新或者重定向对于那些不能使用CGI或Servlet的HTML编写者十分重要。但是，对于Servlet来说，直接设置Refresh头更加方便。注意⚠️ Refresh的意义是"N秒之后刷新本页面或者访问指定页面"，而不是"每隔N秒刷新本页面或访问指定页面"。因此，连续刷新要求每次都发送一个Refresh头，而发送204状态码则可以阻止浏览器继续刷新，不管是使用Refresh头还是<META HTTP-EQUIV="Refresh"...> Refresh头不属于HTTP1.1正式规定的一部分，而是一个扩展，但是Netscape和IE都支持它。|
+|Server|服务器名字。Servlet一般不设置这个值，而是由web服务器自己设置。|
+|Set-Cookie|设置和页面关联的Cookie.Servlet不应使用response.setHeader("Set-Cookie",...),而是应使用HttpServletResponse提供的专用方法addCookie。|
 
 
 
