@@ -90,14 +90,32 @@ class CArray {
             this.dataStore[inner] = temp;
         }
     }
+    // 快速排序
+    quickSort (list) {
+        if(list.length == 0){
+            return [];
+        }
+        var lesser = [];
+        var greater = [];
+        var pivot = list[0];
+        for(var i = 1; i < list.length; i++){
+            if(list[i] < pivot) {
+                lesser.push(list[i]);
+            }else{
+                greater.push(list[i]);
+            }
+        }
+        return this.quickSort(lesser).concat(pivot,this.quickSort(greater));
+    }
 }
 
-var numElements = 10;
-var myNums = new CArray(numElements);
-myNums.setData();
+// var numElements = 10;
+// var myNums = new CArray(numElements);
+// myNums.setData();
 // 基础排序
 // myNums.bubbleSort(); // 冒泡排序
 // myNums.selectionSort(); // 选择排序
 // myNums.insertionSort(); // 插入排序
-console.log(myNums.toString());
+ console.log(myNums.quickSort([3,2,5,1,6,3])); // 快速排序
+// console.log(myNums.toString());
 ```
