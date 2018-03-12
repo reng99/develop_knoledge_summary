@@ -59,7 +59,7 @@ window.applicationCache.addEventListener('updateready',function(e){
       window.location.reload();
     }
   }
-})
+},false)
 ```
 
 ### cookies,sessionStorage和localStorage的区别？
@@ -84,4 +84,7 @@ sessionStorage数据在当前浏览器窗口关闭后自动删除；
 
 cookie设置cookie过期时间之前一直有效，即使窗口或浏览器关闭。
 
+### webSocket如何兼容低浏览器？(阿里)
+
+Adobe Flash Socket 、 ActiveX HTMLFile (IE) 、 基于 multipart 编码发送 XHR 、 基于长轮询的 XHR
 
