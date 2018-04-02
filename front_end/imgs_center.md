@@ -94,7 +94,30 @@ css图片居中分为图片的`水平居中`和`垂直居中`两种情况，有�
 
 [css图片居中(水平居中和垂直居中)](http://www.51xuediannao.com/html+css/htmlcssjq/css_img_center.html)
 
+### 补充一点
 
+可以使用background使得背景图片居中，直接上代码了
+
+```html
+<div class="swiper-slide">
+  <a href="javascript:;" style="background:url('/static/asset/image/banner01.jpg') no-repeat center center !important;"></a>
+</div>
+<div class="swiper-slide">
+  <a href="javascript:;" style="background:url('/static/asset/image/banner02.jpg') no-repeat center center !important;"></a
+</div>
+<div class="swiper-slide">
+  <a href="javascript:;" style="background:url('/static/asset/image/banner03.jpg') no-repeat center center !important;"></a>
+</div>
+```
+
+注意上面的a标签的样式，要是块级的哦，并设定高度和宽度，这里我是这样设计：
+
+```csss
+  display:block;
+  width: 100%;
+  height: 600px;
+  background-size:cover;
+```
 
 
 
